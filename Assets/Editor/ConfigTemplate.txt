@@ -1,0 +1,45 @@
+using UnityEngine;
+using System;
+using System.Collections.Generic;
+namespace QiYuan.Config
+{
+	[@CustomClass]
+	{
+		[Serializable]
+		public class {@Class}
+		{
+		    [@NestedField]{[SerializeField]private {@Type} m{@Name};}
+			[@NestedProperty]
+			{
+				public {@Type} {@Name}
+				{
+					get{ return m{@Name}; }
+					set{ m{@Name} = value; }
+				}
+			}
+		}
+	}
+	[@CoreClass]
+	{
+		[Serializable]
+		public class {@Class}Property
+		{
+			[@Field]{[SerializeField]private {@Type} m{@Name};}
+			[@Property]
+			{
+				public {@Type} {@Name}
+				{
+					get{ return m{@Name}; }
+					set{ m{@Name} = value; }
+				}
+			}
+		}
+	}
+	[@ScriptableObject]
+	{
+		public class {@Class} : ConfigAssetBase<{@Class}Property>
+		{
+			private static string Path = "ConfigAssets/{@Class}";
+		}
+	}
+}
