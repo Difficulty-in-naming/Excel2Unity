@@ -1,6 +1,6 @@
 # Excel2Unity
 
--该库已经废弃请移步到#https://github.com/pk27602017/Excel2Sqlite
+该库已经废弃请移步到#https://github.com/pk27602017/Excel2Sqlite
 
 About
 ===
